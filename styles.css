@@ -42,12 +42,29 @@ body.dark-mode .navbar {
     border-bottom: 1px solid var(--border-color);
 }
 
+body.dark-mode .nav-logo a {
+    color: var(--primary-color);
+}
+
+body.dark-mode .nav-logo a:hover {
+    color: var(--primary-dark);
+}
+
 body.dark-mode .nav-link {
     color: var(--text-primary);
 }
 
 body.dark-mode .nav-link:hover {
     color: var(--primary-color);
+}
+
+body.dark-mode .nav-toggle span {
+    background: var(--text-primary);
+}
+
+body.dark-mode .nav-menu {
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
 }
 
 body.dark-mode .hero h1 {
