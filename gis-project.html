@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographic Information System - Project Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-gallery {
+            padding: 100px 20px 60px;
+            min-height: 100vh;
+            background: var(--bg-secondary);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+            }
+
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html#projects" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back to Projects
+    </a>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h1 class="gallery-title">Geographic Information System</h1>
+            <p class="gallery-subtitle">
+                A comprehensive GIS platform for spatial data visualization, mapping, and location-based analysis 
+                with interactive layers and geospatial tools. 
+            </p>
+            <hr>
+            <br><h2 class="gallery-title">USER SIDE</h2>
+            <p class="gallery-subtitle">
+                User interfaces for GIS system access and interaction.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Login.jpg" alt="Login Screen" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Login.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Login Screen</h3>
+                    <p>Secure user authentication with GIS-specific access controls.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Register.jpg" alt="Registration" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Register.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>User Registration</h3>
+                    <p>Streamlined registration process for GIS system access.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Forgot_password.jpg" alt="Forgot Password" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Forgot_password.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Forgot Password</h3>
+                    <p>Secure password recovery for GIS user accounts.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Landingpage.jpg" alt="Landing Page" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Landingpage.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Landing Page</h3>
+                    <p>Main dashboard with spatial data overview and navigation.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Evacuation_map.jpg" alt="Evacuation Map" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Evacuation_map.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Evacuation Map</h3>
+                    <p>Interactive evacuation routes and safety zone mapping.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Evacuation_reservation.jpg" alt="Evacuation Reservation" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Evacuation_reservation.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Evacuation Reservation</h3>
+                    <p>System for managing evacuation reservations and allocations.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/IDP_protection.jpg" alt="IDP Protection" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/IDP_protection.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>IDP Protection</h3>
+                    <p>Internally Displaced Persons protection and tracking system.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/NewsFeed.jpg" alt="News Feed" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/NewsFeed.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>News Feed</h3>
+                    <p>Real-time geospatial news and updates feed.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Profile.jpg" alt="User Profile" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Profile.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>User Profile</h3>
+                    <p>Comprehensive user profile with GIS-specific settings.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Risk_assesment.jpg" alt="Risk Assessment" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Risk_assesment.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Risk Assessment</h3>
+                    <p>Advanced risk assessment and analysis tools.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Risk_mapjpg.jpg" alt="Risk Map" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Risk_mapjpg.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Risk Map</h3>
+                    <p>Interactive risk mapping with spatial analysis.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/User_feedbacks.jpg" alt="User Feedbacks" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/User_feedbacks.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>User Feedbacks</h3>
+                    <p>System for collecting and managing user feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h1 class="gallery-title">ADMIN SIDE</h1>
+            <p class="gallery-subtitle">
+                Administrative interfaces for system management, monitoring, and control.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admindashboard.jpg" alt="Admin Dashboard" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admindashboard.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Admin Dashboard</h3>
+                    <p>Main administrative control center with system overview.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_ashfall_plan.jpg" alt="Ashfall Plan" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_ashfall_plan.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Ashfall Plan</h3>
+                    <p>Emergency response plan for volcanic ashfall scenarios.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_assesment_questions.jpg" alt="Assessment Questions" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_assesment_questions.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Assessment Questions</h3>
+                    <p>Risk assessment questionnaire management interface.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Broadcast_notification.jpg" alt="Broadcast Notification" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Broadcast_notification.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Broadcast Notification</h3>
+                    <p>System-wide emergency broadcast management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_creating_broadcast_notification.jpg" alt="Creating Broadcast" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_creating_broadcast_notification.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Creating Broadcast</h3>
+                    <p>Interface for composing emergency broadcasts.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Create_feed_post.jpg" alt="Create Feed Post" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Create_feed_post.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Create Feed Post</h3>
+                    <p>News feed post creation and management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_daily_weather.jpg" alt="Daily Weather" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_daily_weather.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Daily Weather</h3>
+                    <p>Weather monitoring and forecast display.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Demographic_Analytics.jpg" alt="Demographic Analytics" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Demographic_Analytics.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Demographic Analytics</h3>
+                    <p>Population data analysis and visualization.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_disaster_preparednes.jpg" alt="Disaster Preparedness" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_disaster_preparednes.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Disaster Preparedness</h3>
+                    <p>Emergency preparedness planning and resources.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_disaster_risk_overview.jpg" alt="Disaster Risk Overview" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_disaster_risk_overview.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Disaster Risk Overview</h3>
+                    <p>Comprehensive risk assessment dashboard.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Disaster_types.jpg" alt="Disaster Types" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Disaster_types.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Disaster Types</h3>
+                    <p>Classification and management of disaster types.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_emergency_contacts.jpg" alt="Emergency Contacts" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_emergency_contacts.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Emergency Contacts</h3>
+                    <p>Emergency contact directory management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_evacuation_map.jpg" alt="Evacuation Map" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_evacuation_map.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Evacuation Map</h3>
+                    <p>Interactive evacuation route planning.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_family_heads.jpg" alt="Family Heads" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_family_heads.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Family Heads</h3>
+                    <p>Family head registration and management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_fire_plan.jpg" alt="Fire Plan" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_fire_plan.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Fire Plan</h3>
+                    <p>Fire emergency response planning.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_flood_plan.jpg" alt="Flood Plan" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_flood_plan.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Flood Plan</h3>
+                    <p>Flood emergency response planning.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Hazard_map.jpg" alt="Hazard Map" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Hazard_map.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Hazard Map</h3>
+                    <p>Interactive hazard zone mapping.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_idp_application.jpg" alt="IDP Application" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_idp_application.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>IDP Application</h3>
+                    <p>Internally displaced persons application processing.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_lahar_plan.jpg" alt="Lahar Plan" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_lahar_plan.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Lahar Plan</h3>
+                    <p>Volcanic lahar emergency response planning.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_landslide_plan.jpg" alt="Landslide Plan" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_landslide_plan.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Landslide Plan</h3>
+                    <p>Landslide emergency response planning.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_mudflow_plan.jpg" alt="Mudflow Plan" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_mudflow_plan.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Mudflow Plan</h3>
+                    <p>Mudflow emergency response planning.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Profile.jpg" alt="Admin Profile" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Profile.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Admin Profile</h3>
+                    <p>Administrator profile management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Recent_activity.jpg" alt="Recent Activity" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Recent_activity.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Recent Activity</h3>
+                    <p>System activity monitoring and logs.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Recent_broadcast.jpg" alt="Recent Broadcast" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Recent_broadcast.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Recent Broadcast</h3>
+                    <p>History of sent emergency broadcasts.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Resident_feedbacks.jpg" alt="Resident Feedbacks" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Resident_feedbacks.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Resident Feedbacks</h3>
+                    <p>Resident feedback collection and review.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Residents.jpg" alt="Residents" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Residents.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Residents</h3>
+                    <p>Resident database management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Risk_analysis_table.jpg" alt="Risk Analysis Table" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Risk_analysis_table.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Risk Analysis Table</h3>
+                    <p>Detailed risk assessment data table.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_SMS.jpg" alt="SMS Management" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_SMS.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>SMS Management</h3>
+                    <p>SMS notification system management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_table_list.jpg" alt="Table List" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_table_list.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Table List</h3>
+                    <p>Data table management interface.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_Tools.jpg" alt="Tools" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_Tools.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Tools</h3>
+                    <p>Administrative tools and utilities.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_version_of_assesments.jpg" alt="Version of Assessments" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_version_of_assesments.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Version of Assessments</h3>
+                    <p>Assessment version control and history.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/admin_dashboard_wind_plan.jpg" alt="Wind Plan" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/admin_dashboard_wind_plan.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Wind Plan</h3>
+                    <p>Wind-related emergency response planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h1 class="gallery-title">SUPER ADMIN</h1>
+            <p class="gallery-subtitle">
+                Super admin controls for system-wide configuration, user management, and oversight.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Superadmin_dashboard.jpg" alt="Super Admin Dashboard" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Superadmin_dashboard.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Super Admin Dashboard</h3>
+                    <p>Master control center for system-wide oversight.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Superadmin_account_management.jpg" alt="Account Management" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Superadmin_account_management.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Account Management</h3>
+                    <p>System-wide user account administration.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Superadmin_activity_logs.jpg" alt="Activity Logs" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Superadmin_activity_logs.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Activity Logs</h3>
+                    <p>Comprehensive system activity monitoring.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Superadmin_hazard_map.jpg" alt="Super Admin Hazard Map" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Superadmin_hazard_map.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Super Admin Hazard Map</h3>
+                    <p>System-wide hazard monitoring and mapping.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Superadmin_monitoring_evacuation_centers.jpg" alt="Monitoring Evacuation Centers" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Superadmin_monitoring_evacuation_centers.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Monitoring Evacuation Centers</h3>
+                    <p>Real-time evacuation center status monitoring.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Superadmin_monitoring_highrisk_puroks.jpg" alt="Monitoring High-Risk Puroks" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Superadmin_monitoring_highrisk_puroks.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Monitoring High-Risk Puroks</h3>
+                    <p>High-risk area monitoring and alerts.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GIS/Superadmin_profile.jpg" alt="Super Admin Profile" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GIS/Superadmin_profile.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Super Admin Profile</h3>
+                    <p>Super administrator profile management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add click-to-view functionality for images
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.gallery-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const src = img.src;
+                    
+                    // Create modal for full-screen viewing
+                    const modal = document.createElement('div');
+                    modal.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.9);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 10000;
+                        cursor: pointer;
+                    `;
+                    
+                    const modalImg = document.createElement('img');
+                    modalImg.src = src;
+                    modalImg.style.cssText = `
+                        max-width: 90%;
+                        max-height: 90%;
+                        object-fit: contain;
+                        cursor: default;
+                    `;
+                    
+                    // Add X button
+                    const closeButton = document.createElement('button');
+                    closeButton.innerHTML = '×';
+                    closeButton.style.cssText = `
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(255, 255, 255, 0.9);
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 24px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease;
+                        z-index: 10001;
+                    `;
+                    
+                    closeButton.addEventListener('mouseenter', () => {
+                        closeButton.style.background = 'white';
+                        closeButton.style.transform = 'scale(1.1)';
+                    });
+                    
+                    closeButton.addEventListener('mouseleave', () => {
+                        closeButton.style.background = 'rgba(255, 255, 255, 0.9)';
+                        closeButton.style.transform = 'scale(1)';
+                    });
+                    
+                    modal.appendChild(modalImg);
+                    modal.appendChild(closeButton);
+                    document.body.appendChild(modal);
+                    
+                    // Close modal when clicking X button
+                    closeButton.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        document.body.removeChild(modal);
+                    });
+                    
+                    // Close modal when clicking background
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            document.body.removeChild(modal);
+                        }
+                    });
+                    
+                    // Close modal on Escape key
+                    const handleEscape = (e) => {
+                        if (e.key === 'Escape') {
+                            document.body.removeChild(modal);
+                            document.removeEventListener('keydown', handleEscape);
+                        }
+                    };
+                    document.addEventListener('keydown', handleEscape);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

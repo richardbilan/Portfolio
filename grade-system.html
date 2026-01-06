@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Grade System - Project Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-gallery {
+            padding: 40px 20px;
+            background: var(--bg-secondary);
+        }
+
+        .project-gallery:first-of-type {
+            padding-top: 60px;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+            }
+
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html#projects" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back to Projects
+    </a>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h1 class="gallery-title">Automated Grade System</h1>
+            <p class="gallery-subtitle">
+                An automated grade management system for educators to calculate, track, and report student grades with analytics and performance insights. 
+                Features class scheduling, teacher dashboards, and SMS notifications for grade updates and important announcements.
+            </p>
+            <hr>
+        </div>
+    </section>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h2 class="gallery-title">STUDENT SIDE</h2>
+            <p class="gallery-subtitle">
+                Student interfaces for accessing grades, schedules, and academic information.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Student_dashboard.png" alt="Student Dashboard" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Student_dashboard.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Student Dashboard</h3>
+                    <p>Main dashboard showing grades, schedules, and announcements.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Student_force_change_default_password_when_first_login.png" alt="Force Change Password" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Student_force_change_default_password_when_first_login.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Force Change Password</h3>
+                    <p>First-time login password change requirement.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Student_grades.png" alt="Student Grades" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Student_grades.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Student Grades</h3>
+                    <p>View detailed grades and academic performance.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Student_profile.png" alt="Student Profile" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Student_profile.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Student Profile</h3>
+                    <p>Personal information and account settings.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Student_schedule.png" alt="Student Schedule" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Student_schedule.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Student Schedule</h3>
+                    <p>View class schedules and academic calendar.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Student_subjects.png" alt="Student Subjects" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Student_subjects.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Student Subjects</h3>
+                    <p>View enrolled subjects and course information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h2 class="gallery-title">TEACHER SIDE</h2>
+            <p class="gallery-subtitle">
+                Teacher interfaces for managing grades, classes, and student assessments.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Teacher_create_grades.png" alt="Create Grades" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Teacher_create_grades.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Create Grades</h3>
+                    <p>Interface for recording and managing student grades.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Teacher_dashboard.png" alt="Teacher Dashboard" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Teacher_dashboard.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Teacher Dashboard</h3>
+                    <p>Main control center for teachers.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Teacher_force_change_password_first_time_login.png" alt="Force Change Password" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Teacher_force_change_password_first_time_login.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Force Change Password</h3>
+                    <p>First-time login password change for teachers.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/teacher_handle_classes.png" alt="Handle Classes" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/teacher_handle_classes.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Handle Classes</h3>
+                    <p>Class management and organization tools.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/Teacher_profile.png" alt="Teacher Profile" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/Teacher_profile.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Teacher Profile</h3>
+                    <p>Teacher account management and settings.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/teacher_student_ranking.png" alt="Student Ranking" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/teacher_student_ranking.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Student Ranking</h3>
+                    <p>Student performance ranking and analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h2 class="gallery-title">PRINCIPAL SIDE</h2>
+            <p class="gallery-subtitle">
+                Principal interfaces for school-wide oversight and administrative functions.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/principal_dashboard.jpg" alt="Principal Dashboard" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/principal_dashboard.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Principal Dashboard</h3>
+                    <p>Main control center for school administrators.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/principal_dashboard_topperforning_class.jpg" alt="Top Performing Class" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/principal_dashboard_topperforning_class.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Top Performing Class</h3>
+                    <p>Class performance analytics and rankings.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/principal_grade_approval.jpg" alt="Grade Approval" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/principal_grade_approval.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Grade Approval</h3>
+                    <p>Grade review and approval workflow.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/principal_grade_report.jpg" alt="Grade Report" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/principal_grade_report.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Grade Report</h3>
+                    <p>Comprehensive grade reporting system.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/principal_profile.jpg" alt="Principal Profile" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/principal_profile.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Principal Profile</h3>
+                    <p>Principal account management and settings.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/principal_teachers_and_faculty_members.jpg" alt="Teachers & Faculty" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/principal_teachers_and_faculty_members.jpg'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Teachers & Faculty</h3>
+                    <p>Faculty member management and directory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-gallery">
+        <div class="gallery-header">
+            <h2 class="gallery-title">ADMIN SIDE</h2>
+            <p class="gallery-subtitle">
+                System administration interfaces for configuration and management.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_dashboard.png" alt="Admin Dashboard" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_dashboard.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Admin Dashboard</h3>
+                    <p>System administration control center.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_creating_new_student_batch.png" alt="Create Student Batch" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_creating_new_student_batch.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Create Student Batch</h3>
+                    <p>Batch student registration and enrollment.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_dashboard_graphs.png" alt="Dashboard Graphs" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_dashboard_graphs.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Dashboard Graphs</h3>
+                    <p>Visual analytics and data graphs.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_principal_management.png" alt="Principal Management" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_principal_management.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Principal Management</h3>
+                    <p>Principal account administration.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_recent_activity.png" alt="Recent Activity" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_recent_activity.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Recent Activity</h3>
+                    <p>System activity monitoring and logs.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_schedule_management.png" alt="Schedule Management" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_schedule_management.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Schedule Management</h3>
+                    <p>Class schedule and calendar management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_Student_management.png" alt="Student Management" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_Student_management.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Student Management</h3>
+                    <p>Student database and record management.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_subject_management.png" alt="Subject Management" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_subject_management.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Subject Management</h3>
+                    <p>Course and subject administration.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="./assets/projects/GradeAutomation/admin_teacher_management.png" alt="Teacher Management" onerror="this.src='file:///C:/Users/Richard%20Bilan/Downloads/portfolio2026/assets/projects/GradeAutomation/admin_teacher_management.png'; this.onerror=null;">
+                </div>
+                <div class="gallery-info">
+                    <h3>Teacher Management</h3>
+                    <p>Teacher account and profile management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add click-to-view functionality for images
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.gallery-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const src = img.src;
+                    
+                    // Create modal for full-screen viewing
+                    const modal = document.createElement('div');
+                    modal.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.9);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 10000;
+                        cursor: pointer;
+                    `;
+                    
+                    const modalImg = document.createElement('img');
+                    modalImg.src = src;
+                    modalImg.style.cssText = `
+                        max-width: 90%;
+                        max-height: 90%;
+                        object-fit: contain;
+                        cursor: default;
+                    `;
+                    
+                    // Add X button
+                    const closeButton = document.createElement('button');
+                    closeButton.innerHTML = '×';
+                    closeButton.style.cssText = `
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(255, 255, 255, 0.9);
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 24px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease;
+                        z-index: 10001;
+                    `;
+                    
+                    closeButton.addEventListener('mouseenter', () => {
+                        closeButton.style.background = 'white';
+                        closeButton.style.transform = 'scale(1.1)';
+                    });
+                    
+                    closeButton.addEventListener('mouseleave', () => {
+                        closeButton.style.background = 'rgba(255, 255, 255, 0.9)';
+                        closeButton.style.transform = 'scale(1)';
+                    });
+                    
+                    modal.appendChild(modalImg);
+                    modal.appendChild(closeButton);
+                    document.body.appendChild(modal);
+                    
+                    // Close modal when clicking X button
+                    closeButton.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        document.body.removeChild(modal);
+                    });
+                    
+                    // Close modal when clicking background
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            document.body.removeChild(modal);
+                        }
+                    });
+                    
+                    // Close modal on Escape key
+                    const handleEscape = (e) => {
+                        if (e.key === 'Escape') {
+                            document.body.removeChild(modal);
+                            document.removeEventListener('keydown', handleEscape);
+                        }
+                    };
+                    document.addEventListener('keydown', handleEscape);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
